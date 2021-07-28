@@ -1,0 +1,160 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    cursor: url(images/aimtarget.png),text;
+    overflow: hidden;
+    user-select: none;
+}
+body:before
+{
+    content: '';
+    display: block;
+    position: fixed;
+    background-image:url(images/sky1.png);
+    background-repeat: no-repeat;
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 25%;
+    height: 3%;
+    z-index: 1;
+    user-select: none;
+}
+@keyframes jackson-storm 
+{
+    0%
+    {
+        left: 2000px;
+        top: 650px;
+    }
+    100%
+    {
+        left: -200px;
+        top: 650px;
+    }
+}
+input + label
+{
+    position: absolute;
+    left: -500px;
+    z-index: 1;
+    width: 240px;
+    height: 70px;
+    display: block;
+    transform: translate(-100%,-100%);
+    background: url(images/enemy.png);
+    user-select: none;
+}
+input:checked+ label
+{
+    opacity: 0;
+    transition: 2s;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: rotateZ(190deg);
+    user-select: none;
+}
+.enemy:nth-last-of-type(1)
+{
+    animation: jackson-storm 5s linear 1s infinite;
+    cursor: url(images/aimtarget.png),text;
+}
+.enemy:nth-last-of-type(2)
+{
+    animation: jackson-storm 10s linear 5s infinite;
+    cursor: url(images/aimtarget.png),text;
+}
+.enemy:nth-last-of-type(3)
+{
+    animation: jackson-storm 15s linear 10s infinite;
+    cursor: url(images/aimtarget.png),text;
+}
+.enemy:nth-last-of-type(4)
+{
+    animation: jackson-storm 12s linear 14s infinite;
+    cursor: url(images/aimtarget.png),text;
+}
+.enemy:nth-last-of-type(5)
+{
+    animation: jackson-storm 5s linear 18s infinite;
+    cursor: url(images/aimtarget.png),text;
+}
+.enemy:nth-last-of-type(6)
+{
+    animation: jackson-storm 3s linear 21s infinite;
+    cursor: url(images/aimtar5get.png),text; 
+}
+.enemy:nth-last-of-type(7)
+{
+    animation: jackson-storm 4s linear 25s infinite;
+    cursor: url(images/aimtarget.png),text; 
+}
+.enemy:nth-last-of-type(8)
+{
+    animation: jackson-storm 5s linear 29s infinite;
+    cursor: url(images/aimtarget.png),text; 
+}
+.enemy:nth-last-of-type(9)
+{
+    animation: jackson-storm 7s linear 33s infinite;
+    cursor: url(images/aimtarget.png),text;
+}
+.enemy:nth-last-of-type(10)
+{
+    animation: jackson-storm 8s linear 37s infinite;
+    cursor: url(images/aimtarget.png),text;
+}
+.enemy:nth-last-of-type(11)
+{
+    animation: jackson-storm 9s linear 41s infinite;
+    cursor: url(images/aimtarget.png),text;
+}
+.enemy:nth-last-of-type(12)
+{
+    animation: jackson-storm 10s linear 45s infinite;
+    cursor: url(images/aimtarget.png),text;
+}
+.score
+{
+    position: absolute;
+    top: 40px;
+    height: 50px;
+    width: 97%;
+    color: white;
+    z-index: 2;
+    text-align: right;
+    font-size: 30px;
+}
+.score:before
+{
+    content: 'Score : ' ;
+    margin-right: 1px;
+}
+.score:after
+{
+    content: counter(score);
+    display: inline-block;
+}
+input:checked
+{
+    counter-increment: score;
+}
+.pause
+{
+    color: white;
+    font-size: 20px;
+    margin-left: 30px;
+    bottom: 30%;
+    text-decoration: none;
+    background:transparent;
+    padding: 5px;
+    font-weight: bolder;
+    cursor:pointer;
+    border-radius:100px;
+    user-select: none;
+}
+.pause:hover
+{
+    background: violet;
+    border: 5px solid white;
+}
